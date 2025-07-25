@@ -1,0 +1,44 @@
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 30px 150px
+}
+
+.header-right {
+    display: flex;         
+    align-items: center;   
+    gap: 40px;            
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav a.active {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+.cart a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
