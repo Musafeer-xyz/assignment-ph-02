@@ -120,8 +120,6 @@ h3 {
     color: var(--body-text);
 }
 
-/* --- GLOBAL/REUSABLE STYLES --- */
-/* You might have these already */
 
 .section-header {
     text-align: center;
@@ -227,8 +225,8 @@ h3 {
 .badge {
     position: absolute;
     top: -70px;
-    right: -70px;
-    width: 200px;
+    right: -80px;
+    width: 230px;
     height: auto;
 }
 
@@ -252,23 +250,17 @@ h3 {
 
 #deals {
     background-color: #F8F9FA;
-    /* Light grey background */
     padding: 80px 0;
 }
 
-/* 1. Define the Grid Container */
 .deals-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     grid-template-rows: auto auto;
-    /* Two rows that size to their content */
     gap: 20px;
     height: 500px;
-    /* Give the grid a fixed height */
 }
 
-/* 2. Place each card on the grid */
 .deal-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -284,16 +276,11 @@ h3 {
     grid-row: 1 / 3;
 }
 
-/* This card spans 2 rows */
 
-
-/* 3. Style the Deal Cards themselves */
 .deal-card {
     position: relative;
-    /* Anchor for the text overlay */
     border-radius: 15px;
     overflow: hidden;
-    /* Ensures the image respects the border-radius */
     color: white;
 }
 
@@ -301,13 +288,12 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Makes the image fill the container without distortion */
     transition: transform 0.4s ease;
 }
 
 .deal-card:hover img {
     transform: scale(1.05);
-    /* A nice zoom effect on hover */
+
 }
 
 
@@ -337,6 +323,134 @@ h3 {
     color: white;
     font-weight: bold;
     text-decoration: underline;
+}
+
+#newsletter {
+    padding: 100px 20px;
+    background-image: url('assets/news-letter-bg.png');
+    /* Your background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#newsletter {
+    padding: 200px 0;
+    background-image: url('assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#newsletter .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+#newsletter h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.subscribe-form input {
+    width: 450px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+
+/* --- FOOTER STYLING (Desktop) --- */
+footer {
+    /* color: #cccccc; */
+    padding: 80px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    color: #7e7d7d;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: white;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: rgb(36, 35, 35);
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* ================================================= */
@@ -421,5 +535,34 @@ h3 {
 
     .deal-card {
         min-height: 250px;
+    }
+
+    /* --- NEWSLETTER  --- */
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 5px;
+    }
+
+
+    /* --- FOOTER--- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
