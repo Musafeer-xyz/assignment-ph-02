@@ -54,7 +54,7 @@ nav a.active {
     --primary-orange: #E95A08;
     --dark-text: #000000;
     --body-text: #555555;
-    --background-color: #F8F9FA;
+    /* --background-color: #F8F9FA; */
     --heading-font: 'Noto Serif', serif;
     --body-font: 'Inter', sans-serif;
 }
@@ -118,4 +118,71 @@ h3 {
     font-weight: 400;
     line-height: 1.7;
     color: var(--body-text);
+}
+
+/* --- GLOBAL/REUSABLE STYLES --- */
+/* You might have these already */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+/* --- PRODUCTS SECTION STYLING --- */
+
+#products {
+    
+    padding: 80px 0;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;                             
+}
+
+.product-card {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-family: var(--body-font);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 20px;
 }
