@@ -150,15 +150,15 @@ h3 {
 /* --- PRODUCTS SECTION STYLING --- */
 
 #products {
-    
+
     padding: 80px 0;
 }
 
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px;                             
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .product-card {
@@ -185,4 +185,75 @@ h3 {
     font-weight: 600;
     color: var(--dark-text);
     margin-bottom: 20px;
+}
+
+.btn {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;  
+}
+
+.btn:hover {
+    background-color: #ffffff; 
+    border: 2px solid #E95A08; 
+    color: #000000;           
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* ============== RESPONSIVE STYLES ============== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+
+    .container {
+        
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 60px 0; 
+    }
+
+    /* --- HEADER --- */
+    header nav {
+        display: none; 
+    }
+    
+    .header-right {
+        gap: 20px; 
+    }
+    
+
+
+    /* --- HERO SECTION --- */
+    #hero .container {
+        grid-template-columns: 1fr; 
+        text-align: center;         
+    }
+
+    .hero-image {
+       
+        order: 2;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;  
+    }
+
+    .hero-content p {
+        font-size: 18px; 
+    }
+
+
+    /* --- PRODUCTS SECTION --- */
+    .product-grid {
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; 
+    }
 }
